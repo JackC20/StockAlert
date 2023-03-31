@@ -7,18 +7,18 @@ from alpha_vantage.timeseries import TimeSeries
 
 texted_stocks = []
 
-api_key = "RUM45LHH2C6TAEWY"
+api_key = #Get your Own Alpha Advantage API key
 
 
-ACCOUNT_SID = 'AC9c242e7b1309540a527908e5b8f224a7'
-AUTH_TOKEN = '078f096d526516bb561bc0e59702dd25'
-TWILIO_PHONE_NUMBER = '18884314177'
-TARGET_PHONE_NUMBER = '8156668806'
+ACCOUNT_SID = #Get own Twilio Trial SID Key
+AUTH_TOKEN = #Get own Twilio Trial Token Key
+TWILIO_PHONE_NUMBER = #Get own Twilio Phone Number 
+TARGET_PHONE_NUMBER = #Phone Number you want to text too
 
 
 def getCurrentPrice(ticker):
     ts = TimeSeries(key=api_key)
-    data, meta_data = ts.get_quote_endpoint(symbol=ticker)
+    data, meta_data = ts.get_quote_endpoint(symbol=ticker) 
     current_price = float(data['05. price'])
     return current_price
 
